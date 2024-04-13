@@ -31,7 +31,7 @@ void Restaurant::adauga_bautura(Bauturi* bautura) {
 
 void Restaurant::afisare_bauturi() {
     std::cout << "Bauturile noastre : ..." << std::endl;
-    for (int i = 0; i < bauturi.size(); ++i) {
+    for (int i = 0; (unsigned long long)i < bauturi.size(); ++i) {
         //Folosire downcasting
         if (Alcolice* alcolice = dynamic_cast<Alcolice*>(bauturi[i])) {
             std::cout << "***Bautura Alcoolica***" << std::endl;
