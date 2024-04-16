@@ -46,6 +46,8 @@ public:
 
     const std::string& getNumeRestaurnat() const;
     int getAnFinantare() const;
+
+    const std::vector<Produs> &getMeniu() const;
 };
 
 

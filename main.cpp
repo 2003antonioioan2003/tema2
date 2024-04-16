@@ -52,7 +52,8 @@ int main() {
                 }
                 int m = 0;
                 for(auto& restaurant : restaurante){
-                    std::cout<<m<<"."<<restaurant;
+                    std::vector<Produs>men = restaurant.getMeniu();
+                    std::cout<<m<<"."<<restaurant<<" cu atatea produse:"<<men.size()<<std::endl;
                     m++;
                 }
                 break;

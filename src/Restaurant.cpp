@@ -157,3 +157,7 @@ const std::string& Restaurant::getNumeRestaurnat() const {
 int Restaurant::getAnFinantare() const {
     return an_finantare;
 }
+
+const std::vector<Produs> &Restaurant::getMeniu() const {
+    return meniu;
+}
