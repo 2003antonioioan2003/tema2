@@ -23,7 +23,8 @@ public:
     void aroma() const override;
     void citire(std::istream& in) override;
     void afisare(std::ostream& out) const override;
-};
 
+    const std::string &getFlavour() const;
+};
 
 #endif //UNTITLED2_NONALCOLICE_H

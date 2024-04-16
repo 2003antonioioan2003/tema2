@@ -25,6 +25,8 @@ public:
 
     void citire(std::istream& in) override;
     void afisare(std::ostream& out) const override;
+
+    int getProcentAlcool() const;
 };
 
 

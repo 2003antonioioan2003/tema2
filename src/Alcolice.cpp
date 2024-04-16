@@ -58,3 +58,6 @@ void Alcolice::afisare(std::ostream& out) const {
     out << " + procent de alcool :  " << procent_alcool << std::endl;
 }
 
+int Alcolice::getProcentAlcool() const {
+    return procent_alcool;
+}

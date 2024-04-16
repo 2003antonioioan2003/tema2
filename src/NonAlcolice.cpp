@@ -39,3 +39,7 @@ void NonAlcolice::afisare(std::ostream& out) const {
     out << " + aroma :  " << flavour << std::endl;
 }
 
+const std::string &NonAlcolice::getFlavour() const {
+    return flavour;
+}
+

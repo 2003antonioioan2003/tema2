@@ -38,9 +38,11 @@ void Restaurant::afisare_bauturi() {
             std::cout << *alcolice;
             std::cout << "Te imbeti de la atatea bauturi: ";
             std::cout << alcolice->betie(100) << std::endl;
+            std::cout<<alcolice->getProcentAlcool()<<std::endl;
         } else if (NonAlcolice* const nonalcolice = dynamic_cast<NonAlcolice*>(bauturi[i])) {
             std::cout << "***Bautura NonAlcoolica***" << std::endl;
             std::cout << *nonalcolice;
+            std::cout<<nonalcolice->getFlavour()<<std::endl;
         }
         //Folosire upcasting
         bauturi[i]->drink();

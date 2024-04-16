@@ -1,6 +1,9 @@
 #include <gtest/gtest.h>
 #include "Produs.h"
 #include "Restaurant.h"
+#include "Bauturi.h"
+#include "Alcolice.h"
+#include "NonAlcolice.h"
 
 TEST(ProdusTest, ConstructorAndEgalitate) {
     Produs p1;
@@ -34,4 +37,17 @@ TEST(RestaurantTest, ConstructorAndAdauga) {
 
     r1.stergeProdus(p1);
     EXPECT_EQ(r1.getMeniu().size(), 1);
+}
+
+TEST(AlcoliceTest, Constructor) {
+    Alcolice a("Wine", 15, 12);
+    EXPECT_EQ(a.getNume(), "Wine");
+    EXPECT_EQ(a.getPret(), 15);
+    EXPECT_EQ(a.getProcentAlcool(), 12);
+}
+TEST(NonAlcoliceTest, Constructor) {
+    NonAlcolice n("Orange Juice", 8, "Orange");
+    EXPECT_EQ(n.getNume(), "Orange Juice");
+    EXPECT_EQ(n.getPret(), 8);
+    EXPECT_EQ(n.getFlavour(), "Orange");
 }
