@@ -51,3 +51,41 @@ TEST(NonAlcoliceTest, Constructor) {
     EXPECT_EQ(n.getPret(), 8);
     EXPECT_EQ(n.getFlavour(), "Orange");
 }
+TEST(AlcoliceTest, DrinkFunction) {
+    Alcolice a("Whiskey", 20, 40);
+    testing::internal::CaptureStdout();
+    a.drink();
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Whiskey are procentul de alcolemie: 40%!\n");
+}
+TEST(AlcoliceTest, AromaFunction) {
+    Alcolice a("Whiskey", 20, 40);
+    testing::internal::CaptureStdout();
+    a.aroma();
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Bauturile alcolice au 95% flavour de tarie!\n");
+}
+TEST(NonAlcoliceTest, DrinkFunction) {
+    NonAlcolice n("Suc de Portocale", 8, "Portocale");
+    testing::internal::CaptureStdout();
+    n.drink();
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Aceasta bautura nu are alcool.\n");
+}
+TEST(NonAlcoliceTest, AromaFunction) {
+    NonAlcolice n("Suc de Portocale", 8, "Portocale");
+    testing::internal::CaptureStdout();
+    n.aroma();
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Aceasta bautura are flavour de Portocale! \n");
+}
+TEST(RestaurantTest, AdaugaBauturi) {
+    Restaurant r1;
+    Alcolice a("Vodka", 10, 40);
+    NonAlcolice n("Cola", 5, "Cola Flavor");
+
+    r1.adauga_bautura(&a);
+    r1.adauga_bautura(&n);
+
+    EXPECT_EQ(r1.getBauturi().size(), 2);
+}

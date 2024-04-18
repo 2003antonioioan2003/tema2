@@ -163,3 +163,7 @@ int Restaurant::getAnFinantare() const {
 const std::vector<Produs> &Restaurant::getMeniu() const {
     return meniu;
 }
+
+const std::vector<Bauturi *> &Restaurant::getBauturi() const {
+    return bauturi;
+}

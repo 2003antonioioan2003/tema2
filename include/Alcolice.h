@@ -8,7 +8,7 @@
 
 #include "Bauturi.h"
 
-class Alcolice : virtual public Bauturi {
+class Alcolice : public Bauturi {
 private:
     int procent_alcool;
 

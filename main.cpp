@@ -144,6 +144,7 @@ int main() {
                             break;
                         }
                         case 5 : {
+                            std::cout<<restaurante[c].getBauturi().size()<<std::endl;
                             restaurante[c].afisare_bauturi();
                             break;
                         }

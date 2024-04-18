@@ -21,7 +21,7 @@ NonAlcolice& NonAlcolice::operator=(const NonAlcolice& other) {
 NonAlcolice::~NonAlcolice() {}
 
 void NonAlcolice::drink() const {
-    std::cout << "Aceasta bautura nu are alcool" << std::endl;
+    std::cout << "Aceasta bautura nu are alcool." << std::endl;
 }
 
 void NonAlcolice::aroma() const {

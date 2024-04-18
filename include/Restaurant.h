@@ -22,7 +22,11 @@ private:
     std::vector<Bauturi*> bauturi;
     static const int maxim = 5;
 
+
+
 public:
+    const std::vector<Bauturi *> &getBauturi() const;
+
     Restaurant();
     Restaurant(const std::string& numele, int an);
     Restaurant(const Restaurant& alt);
