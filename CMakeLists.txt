@@ -174,6 +174,11 @@ add_executable(
         ${HEADERS}
         ${TESTS}
         ${SOURCES}
+        src/Restaurant.cpp
+        src/Produs.cpp
+        src/NonAlcolice.cpp
+        src/Alcolice.cpp
+        src/Bauturi.cpp
 )
 
 target_link_libraries(
